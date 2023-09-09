@@ -33,7 +33,11 @@ class Solution {
                 if (size % 2) {
                     mid = *(nums.begin() + start);
                 } else {
-                    mid = ((double)*(nums.begin() + start) + (double)*(nums.begin() + start + 1)) / 2;
+                    mid = 
+                    (
+                        (double)*(nums.begin() + start) + 
+                        *(nums.begin() + start + 1)
+                    ) / 2;
                 }
 
                 ++start;
@@ -50,7 +54,7 @@ int main() {
 
     Solution test;
     double mid = test.findMedianSortedArrays(nums1, nums2);
-    cout << "Midian = " << mid << endl;
+    cout << "Median = " << mid << endl;
 
     return 0;
 }
