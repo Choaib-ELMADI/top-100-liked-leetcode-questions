@@ -19,7 +19,7 @@ class Solution {
                         if (target == nums[s]+nums[e]) {
                             w.push_back({ -target, nums[s], nums[e] });
                             while (s < e && nums[s] == nums[s+1]) ++s;
-                            while (s < e && nums[e] == nums[e+1]) --e;
+                            while (s < e && nums[e] == nums[e-1]) --e;
                             ++s; --e;
                         } else if (nums[s]+nums[e] < target) {
                             ++s;
